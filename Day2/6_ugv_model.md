@@ -34,6 +34,15 @@ Center: 카메라 팬틸트의 방향을 중앙에 맞춥니다.
 
 ![image](https://github.com/user-attachments/assets/4d6e7dd0-0018-4218-87d3-4151526e6c50)
 
+## 라이트 켜기
+
+ros2 topic pub /ugv/led_ctrl std_msgs/msg/Float32MultiArray "{data: [255, 255]}" -1
+
+## 라이트 끄기
+
+ros2 topic pub /ugv/led_ctrl std_msgs/msg/Float32MultiArray "{data: [0, 0]}" -1
+
+
 
 
 
