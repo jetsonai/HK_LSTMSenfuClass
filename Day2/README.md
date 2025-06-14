@@ -8,3 +8,7 @@
 4_sensorfusion.md
 
 5_ROSsetting.md
+
+6_ugv_model.md
+
+7_ugv_move.md
