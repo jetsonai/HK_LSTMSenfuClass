@@ -38,5 +38,12 @@ cd senfu/testapp
 
 python3 opencvtest.py
 
+![image](https://github.com/user-attachments/assets/b33e2432-c596-4afc-854c-8002de57af6b)
+
+![image](https://github.com/user-attachments/assets/5ce096eb-526b-448a-ab69-c52779eda3ca)
+
+enter 키를 눌러서 화면을 꺼주세요
+
+
 
 
