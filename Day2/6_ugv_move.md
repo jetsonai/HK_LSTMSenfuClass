@@ -1,0 +1,35 @@
+# UGV 드라이브
+
+## UGV BringUp
+
+터미널 켜고 RHE
+
+export DISPLAY=:1
+
+cd /home/ws/ugv_ws
+
+ros2 launch ugv_bringup bringup_lidar.launch.py use_rviz:=true
+
+![image](https://github.com/user-attachments/assets/78e2c6c7-4776-4c73-9bdc-7cb3c968aed4)
+
+
+## 드라이브 테스트 준비
+
+다른 터미널 켜고 RHE
+
+export UGV_MODEL=ugv_rover
+
+source ~/.bashrc
+
+![image](https://github.com/user-attachments/assets/b43775ab-6996-44d1-ae6d-15e4b57e3d9b)
+
+
+## 드라이브 테스트
+
+ros2 run ugv_tools keyboard_ctrl
+
+![image](https://github.com/user-attachments/assets/4ad83d26-1a7f-4b0b-a0d4-24980e18f415)
+
+로봇이 테이블에서 떨어지지 않게 조심해서 한번씩 천천히 눌러주세요
+
+
