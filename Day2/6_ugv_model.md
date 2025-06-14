@@ -48,6 +48,11 @@ ros2 topic pub /ugv/led_ctrl std_msgs/msg/Float32MultiArray "{data: [0, 0]}" -1
 
 ![image](https://github.com/user-attachments/assets/36e41b6f-0e0f-4ed2-afe6-5f21dfb920e3)
 
+## 테스트 종료
+
+모든 창에서 Ctl-C 해주고 창을 닫습니다.
+
+
 
 
 
