@@ -28,6 +28,10 @@ source ~/.bashrc
 
 ros2 run ugv_tools keyboard_ctrl
 
+![image](https://github.com/user-attachments/assets/4ad83d26-1a7f-4b0b-a0d4-24980e18f415)
+
+로봇이 테이블에서 떨어지지 않게 조심해서 한번씩 천천히 눌러주세요
+
 ## 라이다 보기
 
 ![image](https://github.com/user-attachments/assets/e4e039d3-0cef-49cd-957c-51bf7775a0df)
@@ -36,8 +40,5 @@ ros2 run ugv_tools keyboard_ctrl
 
 
 
-![image](https://github.com/user-attachments/assets/4ad83d26-1a7f-4b0b-a0d4-24980e18f415)
-
-로봇이 테이블에서 떨어지지 않게 조심해서 한번씩 천천히 눌러주세요
 
 
