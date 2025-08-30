@@ -1,9 +1,6 @@
 # RVIZ UGV Model
 
-
-alias RHA="sudo xhost +local: &&  sudo docker exec -i -t UGV_RPI_ROS /bin/bash"
-
-alias RHS="sudo docker restart UGV_RPI_ROS"
+## 컨테이너 만들기
 
 sudo docker run --privileged --name UGV_RPI_ROS -e DISPLAY=unix$DISPLAY -e='QT_X11_NO_MITSHM=1' -e IS_PERSISTENT=TRUE -e ANONYMIZED_TELEMETRY=TRUE --ipc=host -it -d --net=host -v /dev/snd:/dev/snd --volume='/docker_job:/docker_job' --volume='/tmp/.X11-unix:/tmp/.X11-unix' -v /home/ws:/home/ws dudulrx0601/ugv_rpi_ros_humble:ugv_rpi_ros_humble
 
@@ -12,6 +9,14 @@ sudo xhost +local:docker && docker exec -it UGV_RPI_ROS /bin/bash
 docker restart UGV_RPI_ROS
 
 docker stop UGV_RPI_ROS
+
+## 로봇 .bashrc 에 편집
+
+alias RHA="sudo xhost +local: &&  sudo docker exec -i -t UGV_RPI_ROS /bin/bash"
+
+alias RHS="sudo docker restart UGV_RPI_ROS"
+
+## 컨테이너 .bashrc 에 편집
 
 source /opt/ros/humble/setup.bash
 
