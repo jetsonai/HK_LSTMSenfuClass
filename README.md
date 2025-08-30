@@ -20,6 +20,8 @@ remote host 입력칸에 192.168.0.10 을 입력하고 OK 해주세요.
 
 터미널 창에 열리면 아이디 비번 ws / ws 입력해주시면 됩니다.
 
+
+
 docker stop ugv_rpi_ros_humble
 docker restart ugv_rpi_ros_humble
 docker exec -it ugv_rpi_ros_humble /bin/bash
