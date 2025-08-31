@@ -26,9 +26,9 @@ source .bashrc
 
 ### 2. 도커 Attach 전에 필수
 
-### 3.  xhost +
+###  xhost +
 
-### 4.  echo $DISPLAY
+###  echo $DISPLAY
 
 ![image](https://github.com/user-attachments/assets/06b087a6-38c0-44ba-b5a4-617c2143281b)
 
