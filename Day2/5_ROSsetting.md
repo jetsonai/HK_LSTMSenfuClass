@@ -1,5 +1,7 @@
 # ROS 환경 시작하기
 
+![image](https://github.com/user-attachments/assets/2fb09f56-4191-472b-a85c-dce99cb7448a)
+
 ## 컨테이너 만들기
 
 sudo docker run --privileged --name UGV_RPI_ROS -e DISPLAY=unix$DISPLAY -e='QT_X11_NO_MITSHM=1' -e IS_PERSISTENT=TRUE -e ANONYMIZED_TELEMETRY=TRUE --ipc=host -it -d --net=host -v /dev/snd:/dev/snd --volume='/docker_job:/docker_job' --volume='/tmp/.X11-unix:/tmp/.X11-unix' -v /home/ws:/home/ws dudulrx0601/ugv_rpi_ros_humble:ugv_rpi_ros_humble
@@ -22,13 +24,11 @@ source .bashrc
 
 
 
-### 2. 터미널 아이콘 눌러서 창 2개 열기
+### 2. 도커 Attach 전에 필수
 
-![image](https://github.com/user-attachments/assets/2fb09f56-4191-472b-a85c-dce99cb7448a)
+### 3.  xhost +
 
-### 3. 1번 터미널에서 xhost +
-
-### 4. 1번 터미널에서 echo $DISPLAY
+### 4.  echo $DISPLAY
 
 ![image](https://github.com/user-attachments/assets/06b087a6-38c0-44ba-b5a4-617c2143281b)
 
@@ -41,16 +41,16 @@ RHS
 
 RHA
 
-### 6. 2번 터미널에서 DOCKER EXEC 를 하여 도커 쉘접속 
+### 6.  도커 Attach 
 
 RHA
 
 ![image](https://github.com/user-attachments/assets/cd058db1-1302-4651-a8e2-0907674880f5)
 
 
-### 7. 2번 터미널 도커 쉘에서 echo $DISPLAY
+### 7. 도커 쉘에서 echo $DISPLAY
 
-### 8. 2번 터미널 도커 쉘에서 export $DISPLAY=[4번에서 출력되 화면번호]
+### 8. 도커 쉘에서 export $DISPLAY=[4번에서 출력되 화면번호]
 
 export DISPLAY=:1
 
