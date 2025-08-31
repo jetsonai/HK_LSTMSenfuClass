@@ -1,15 +1,36 @@
 # RVIZ UGV Model
 
+---------------------------------------------------------------
+
+### 컨테이너 Attach 전이라면 
+
+도커 Attach 전에 필수
+
+xhost +
+
+echo $DISPLAY
+
+### 컨테이너 시작 전이라면 RHS
+
+### 컨테이너 Attach 전이라면 RHA
+
+----------------------------------------------------------------
+
+# 1. ROS2 시작
 
 ## 컨테이너 .bashrc 에 편집
 
 source /opt/ros/humble/setup.bash
 
+export UGV_MODEL=ugv_beast
+
+export LDLIDAR_MODEL=ld19
+
 ## 컨테이너 .bashrc 실행
 
 source .bashrc
 
-# argcomplete for ros2 & colcon
+## argcomplete for ros2 & colcon
 
 eval "$(register-python-argcomplete3 ros2)"
 
@@ -17,20 +38,9 @@ eval "$(register-python-argcomplete3 colcon)"
 
 source /home/ws/ugv_ws/install/setup.bash
 
-export UGV_MODEL=ugv_beast
-
-export LDLIDAR_MODEL=ld19
-
-source /home/ws/ugv_ws/install/setup.bash
-
-
-ros2 launch ugv_description display.launch.py use_rviz:=true
-
+# ugv_description display 예제
 
 ## show rviz
-
-
-cd /home/ws/ugv_ws
 
 ros2 launch ugv_description display.launch.py use_rviz:=true
 
@@ -44,7 +54,7 @@ RVIZ 화면이 뜹니다.
 
 터미널을 하나 더 띄우고
 
-RHE
+RHA
 
 ros2 run ugv_bringup ugv_driver
 
@@ -55,7 +65,9 @@ ros2 run ugv_bringup ugv_driver
 joint state publisher 를 제어해봅니다.
 
 pt_base_link_to_pt_link1: 카메라 팬틸트의 좌우 방향을 제어합니다.
+
 pt_link1_to_pt_link2: 카메라 팬틸트의 위아래 방향을 제어합니다.
+
 Center: 카메라 팬틸트의 방향을 중앙에 맞춥니다.
 
 ![image](https://github.com/user-attachments/assets/4d6e7dd0-0018-4218-87d3-4151526e6c50)
