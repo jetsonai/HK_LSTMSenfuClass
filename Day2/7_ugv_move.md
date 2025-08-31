@@ -15,7 +15,7 @@ ros2 launch ugv_bringup bringup_lidar.launch.py use_rviz:=true
 
 ## 드라이브 테스트 준비
 
-다른 터미널 켜고 RHE
+다른 터미널 켜고 RHA
 
 export UGV_MODEL=ugv_rover
 
