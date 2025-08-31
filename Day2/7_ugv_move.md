@@ -1,12 +1,26 @@
-# UGV 드라이브
+# UGV 브링업
 
-## UGV BringUp
+---------------------------------------------------------------
 
-터미널 켜고 RHE
+### 컨테이너 Attach 전이라면 
+
+도커 Attach 전에 필수
+
+xhost +
+
+echo $DISPLAY
+
+### 컨테이너 시작 전이라면 RHS
+
+### 컨테이너 Attach 전이라면 RHA
+
+----------------------------------------------------------------
+
+# 1. UGV BringUp
 
 export DISPLAY=:1
 
-cd /home/ws/ugv_ws
+## 브링업
 
 ros2 launch ugv_bringup bringup_lidar.launch.py use_rviz:=true
 
@@ -17,9 +31,6 @@ ros2 launch ugv_bringup bringup_lidar.launch.py use_rviz:=true
 
 다른 터미널 켜고 RHA
 
-export UGV_MODEL=ugv_rover
-
-source ~/.bashrc
 
 ![image](https://github.com/user-attachments/assets/b43775ab-6996-44d1-ae6d-15e4b57e3d9b)
 
