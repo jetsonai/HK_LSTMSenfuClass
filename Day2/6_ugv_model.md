@@ -38,7 +38,7 @@ eval "$(register-python-argcomplete3 colcon)"
 
 source /home/ws/ugv_ws/install/setup.bash
 
-# ugv_description display 예제
+# 2. ugv_description display 예제
 
 ## show rviz
 
@@ -50,7 +50,7 @@ RVIZ 화면이 뜹니다.
 
 ![image](https://github.com/user-attachments/assets/5fa68e48-8b13-4b75-a37c-84ffac8c34a5)
 
-## 기능 시작
+# 3. ugv 드라이버 기능 시작
 
 터미널을 하나 더 띄우고
 
