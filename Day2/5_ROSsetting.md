@@ -1,7 +1,25 @@
 # ROS 환경 시작하기
 
-alias RHS='docker restart ugv_rpi_ros_humble'
-alias RHE='xhost + && docker exec -it ugv_rpi_ros_humble /bin/bash'
+## 컨테이너 만들기
+
+sudo docker run --privileged --name UGV_RPI_ROS -e DISPLAY=unix$DISPLAY -e='QT_X11_NO_MITSHM=1' -e IS_PERSISTENT=TRUE -e ANONYMIZED_TELEMETRY=TRUE --ipc=host -it -d --net=host -v /dev/snd:/dev/snd --volume='/docker_job:/docker_job' --volume='/tmp/.X11-unix:/tmp/.X11-unix' -v /home/ws:/home/ws dudulrx0601/ugv_rpi_ros_humble:ugv_rpi_ros_humble
+
+#sudo xhost +local:docker && docker exec -it UGV_RPI_ROS /bin/bash
+
+#docker restart UGV_RPI_ROS
+
+#docker stop UGV_RPI_ROS
+
+## 로봇 .bashrc 에 편집
+
+alias RHA="sudo xhost +local: &&  sudo docker exec -i -t UGV_RPI_ROS /bin/bash"
+
+alias RHS="sudo docker restart UGV_RPI_ROS"
+
+## 로봇 .bashrc 실행
+
+source .bashrc
+
 
 
 ### 2. 터미널 아이콘 눌러서 창 2개 열기
@@ -17,11 +35,15 @@ alias RHE='xhost + && docker exec -it ugv_rpi_ros_humble /bin/bash'
 
 ### 5. 2번 터미널에서 도커 스타트
 
+# 로봇 컨테이너 시작
+
 RHS
+
+RHA
 
 ### 6. 2번 터미널에서 DOCKER EXEC 를 하여 도커 쉘접속 
 
-RHE
+RHA
 
 ![image](https://github.com/user-attachments/assets/cd058db1-1302-4651-a8e2-0907674880f5)
 
